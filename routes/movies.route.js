@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { MovieIndex, MovieCreate, MovieDelete, MovieUpdate } from '../controllers/movies.controller'; 
+import { MovieIndex, MovieCreate, MovieDelete, MovieUpdate } from '../controllers/movies.controller.js'; 
 
 const router = express.Router();
 
