@@ -1,4 +1,5 @@
 import express from "express";
+import movieRoutes from "./routes/movies.route.js"
 
 const app = express()
 
@@ -8,25 +9,10 @@ app.get('/', (req, res)=>{
 });
 
 // CRUD functionality of movies
-// get-for Reading
-app.get('/movies', ()=>{
-    
-});
+// CLINENT -> MIDDLEWARE -> SERVER
 
-//post- for Creating
-app.post('/movies', ()=>{
+app.use('/movies', movieRoutes);
 
-});
-
-//put- for Updating
-app.put('/movies/:id', ()=>{
-
-});
-
-//delete- for Delete
-app.delet('/movies/:id', ()=>{
-
-});
 app.listen(PORT, ()=>{
     console.log(`The server is running at http://localhost:${PORT}`)
 })
