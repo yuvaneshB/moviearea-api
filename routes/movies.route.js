@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { MovieIndex, MovieCreate, MovieDelete, MovieUpdate } from '../controllers/movies.controller.js'; 
+import { MovieIndex, MovieCreate, MovieDelete, MovieDetail, MovieUpdate } from '../controllers/movies.controller.js'; 
 
 const router = express.Router();
 
@@ -8,6 +8,8 @@ const router = express.Router();
 
 // get-for Reading
 router.get('/',MovieIndex);
+
+router.get("/:id", MovieDetail);
 
 //post- for Creating
 router.post('/', MovieCreate);
